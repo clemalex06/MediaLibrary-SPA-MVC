@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ApplicationServices.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,8 @@ namespace WebApplication.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var authors = MediaLibraryApplicationService.GetAuthors();
+            return View(authors);
         }
 
         public ActionResult About()

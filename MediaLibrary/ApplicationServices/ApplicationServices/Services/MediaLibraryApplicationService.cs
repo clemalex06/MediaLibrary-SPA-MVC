@@ -1,12 +1,19 @@
-﻿using System;
+﻿using ApplicationServices.Entities;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ApplicationServices.Services
 {
     public class MediaLibraryApplicationService
     {
+        public static IList<Author> GetAuthors() 
+        {
+            using (var context = new BookStoreContext())
+            {
+                var test = context.Configuration;
+                return context.Authors.Include(p => p.Books).ToList();
+            }
+        }
     }
 }
