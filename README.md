@@ -6,3 +6,6 @@ this section will contain the libraries used for Frontend,and also the useful li
 
 # Backend 
 this section will contain the libraries used for frontend,and also the useful links
+
+# useful links : 
+https://medium.com/@luylucas10/net-mvc-webpack-and-vue-js-part-2-project-structure-fa7de8963ede 
